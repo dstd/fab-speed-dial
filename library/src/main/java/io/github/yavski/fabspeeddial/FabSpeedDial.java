@@ -20,7 +20,6 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.design.internal.NavigationMenu;
@@ -188,7 +187,7 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
 
         fabDrawableTint = typedArray.getColorStateList(R.styleable.FabSpeedDial_fabDrawableTint);
         if (fabDrawableTint == null) {
-            fabDrawableTint = getColorStateList(R.color.fab_drawable_tint);
+            fabDrawableTint = getColorStateList(R.color.fab_speed_dial_fab_drawable_tint);
         }
 
         if (typedArray.hasValue(R.styleable.FabSpeedDial_fabBackgroundTint)) {
@@ -197,24 +196,24 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
 
         miniFabBackgroundTint = typedArray.getColorStateList(R.styleable.FabSpeedDial_miniFabBackgroundTint);
         if (miniFabBackgroundTint == null) {
-            miniFabBackgroundTint = getColorStateList(R.color.fab_background_tint);
+            miniFabBackgroundTint = getColorStateList(R.color.fab_speed_dial_fab_background_tint);
         }
 
         miniFabDrawableTint = typedArray.getColorStateList(R.styleable.FabSpeedDial_miniFabDrawableTint);
         if (miniFabDrawableTint == null) {
-            miniFabDrawableTint = getColorStateList(R.color.mini_fab_drawable_tint);
+            miniFabDrawableTint = getColorStateList(R.color.fab_speed_dial_mini_fab_drawable_tint);
         }
 
         miniFabTitleBackgroundTint = typedArray.getColorStateList(R.styleable.FabSpeedDial_miniFabTitleBackgroundTint);
         if (miniFabTitleBackgroundTint == null) {
-            miniFabTitleBackgroundTint = getColorStateList(R.color.mini_fab_title_background_tint);
+            miniFabTitleBackgroundTint = getColorStateList(R.color.fab_speed_dial_mini_fab_title_background_tint);
         }
 
         miniFabTitlesEnabled = typedArray.getBoolean(R.styleable.FabSpeedDial_miniFabTitlesEnabled, true);
 
 
         miniFabTitleTextColor = typedArray.getColor(R.styleable.FabSpeedDial_miniFabTitleTextColor,
-                ContextCompat.getColor(getContext(), R.color.title_text_color));
+                ContextCompat.getColor(getContext(), R.color.fab_speed_dial_title_text_color));
 
         touchGuardDrawable = typedArray.getDrawable(R.styleable.FabSpeedDial_touchGuardDrawable);
 
@@ -227,7 +226,7 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
 
         LayoutParams layoutParams =
                 new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        int coordinatorLayoutOffset = getResources().getDimensionPixelSize(R.dimen.coordinator_layout_offset);
+        int coordinatorLayoutOffset = getResources().getDimensionPixelSize(R.dimen.fab_speed_dial_coordinator_layout_offset);
         if (fabGravity == BOTTOM_END || fabGravity == TOP_END) {
             layoutParams.setMargins(0, 0, coordinatorLayoutOffset, 0);
         } else {
@@ -419,7 +418,6 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
         if (!TextUtils.isEmpty(title) && miniFabTitlesEnabled) {
             cardView.setCardBackgroundColor(miniFabTitleBackgroundTint.getDefaultColor());
             titleView.setText(title);
-            titleView.setTypeface(null, Typeface.BOLD);
             titleView.setTextColor(miniFabTitleTextColor);
         } else {
             fabMenuItem.removeView(cardView);
@@ -484,7 +482,7 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
     }
 
     private void animateViewIn(final View view, int position) {
-        final float offsetY = getResources().getDimensionPixelSize(R.dimen.keyline_1);
+        final float offsetY = getResources().getDimensionPixelSize(R.dimen.fab_speed_dial_keyline_1);
 
         ViewCompat.setScaleX(view, 0.25f);
         ViewCompat.setScaleY(view, 0.25f);

@@ -16,24 +16,24 @@
   -->
 <resources>
 
-    <style name="MiniFabLayout">
+    <style name="FabSpeedDial_MenuItemLayout">
         <item name="android:layout_gravity">end</item>
-        <item name="android:layout_marginTop">@dimen/fab_menu_item_margin_top</item>
+        <item name="android:layout_marginTop">@dimen/fab_speed_dial_menu_item_margin_top</item>
         <item name="android:orientation">horizontal</item>
     </style>
 
-    <style name="MiniFab">
+    <style name="FabSpeedDial_MenuMiniFab">
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginBottom">@dimen/mini_fab_margin_bottom</item>
-        <item name="android:layout_marginLeft">@dimen/mini_fab_margin_left</item>
-        <item name="android:layout_marginRight">@dimen/mini_fab_margin_right</item>
-        <item name="android:layout_marginTop">@dimen/mini_fab_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/fab_speed_dial_mini_fab_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/fab_speed_dial_mini_fab_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/fab_speed_dial_mini_fab_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/fab_speed_dial_mini_fab_margin_top</item>
         <item name="fabSize">mini</item>
         <item name="paddingEnd">0dp</item>
         <item name="paddingStart">0dp</item>
     </style>
 
-    <style name="TitleCardView">
+    <style name="FabSpeedDial_MenuCardView">
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:clickable">true</item>
         <item name="cardBackgroundColor">@android:color/white</item>
@@ -46,10 +46,12 @@
         <item name="contentPaddingTop">4dp</item>
     </style>
 
-    <style name="TitleView">
+    <style name="FabSpeedDial_MenuTextView">
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:textSize">12sp</item>
         <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/fab_speed_dial_title_text_color</item>
     </style>
 
 </resources>
